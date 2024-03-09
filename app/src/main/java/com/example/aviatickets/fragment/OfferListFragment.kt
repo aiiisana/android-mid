@@ -8,7 +8,12 @@ import android.view.ViewGroup
 import com.example.aviatickets.R
 import com.example.aviatickets.adapter.OfferListAdapter
 import com.example.aviatickets.databinding.FragmentOfferListBinding
+import com.example.aviatickets.model.entity.Offer
+import com.example.aviatickets.model.network.ApiClient
 import com.example.aviatickets.model.service.FakeService
+import retrofit2.Call
+import retrofit2.Response
+import retrofit2.Callback
 
 
 class OfferListFragment : Fragment() {
@@ -37,7 +42,16 @@ class OfferListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         setupUI()
-        adapter.setItems(FakeService.offerList)
+        ApiClient.apiService.getOffers().enqueue(object: Callback<List<Offer>>{
+            override fun onResponse(call: Call<List<Offer>>, response: Response<List<Offer>>) {
+                TODO("Not yet implemented")
+            }
+
+            override fun onFailure(call: Call<List<Offer>>, t: Throwable) {
+                TODO("Not yet implemented")
+            }
+
+        })
     }
 
     private fun setupUI() {

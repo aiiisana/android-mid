@@ -7,6 +7,6 @@ import retrofit2.http.Path
 
 
 interface APIService {
-    @GET("offers")
+    @GET("offer_list")
     fun getOffers(): Call<List<Offer>>
 }
