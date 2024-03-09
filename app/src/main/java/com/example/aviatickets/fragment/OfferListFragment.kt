@@ -42,13 +42,16 @@ class OfferListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         setupUI()
-        ApiClient.apiService.getOffers().enqueue(object: Callback<List<Offer>>{
+
+        val client = ApiClient.instance
+        val response = client.getOffers()
+        response.enqueue(object : Callback<List<Offer>>{
             override fun onResponse(call: Call<List<Offer>>, response: Response<List<Offer>>) {
-                TODO("Not yet implemented")
+                response.body()?.let { adapter.setItems(it) }
             }
 
             override fun onFailure(call: Call<List<Offer>>, t: Throwable) {
-                TODO("Not yet implemented")
+                println("HttpResponse:  ${t.message}")
             }
 
         })

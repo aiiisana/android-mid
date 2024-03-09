@@ -3,6 +3,7 @@ package com.example.aviatickets.model.network
 import com.example.aviatickets.model.service.APIService
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.create
 
 object ApiClient {
 
@@ -11,5 +12,5 @@ object ApiClient {
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
-    val apiService: APIService = retrofit.create(APIService::class.java)
+    val instance = retrofit.create(APIService::class.java)
 }
