@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/AndroidMidterm.iml" filepath="$PROJECT_DIR$/.idea/AndroidMidterm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/aviatickets.iml" filepath="$PROJECT_DIR$/.idea/aviatickets.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/aviatickets.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/aviatickets.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/aviatickets.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/aviatickets.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/aviatickets.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/aviatickets.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/aviatickets.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/aviatickets.app.unitTest.iml" />
     </modules>
   </component>
 </project>

@@ -8,6 +8,8 @@ import java.util.UUID
 
 object FakeService {
 
+
+
     val offerList = listOf(
         Offer(
             id = UUID.randomUUID().toString(),

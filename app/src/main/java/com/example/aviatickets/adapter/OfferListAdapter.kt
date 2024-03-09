@@ -73,4 +73,15 @@ class OfferListAdapter : RecyclerView.Adapter<OfferListAdapter.ViewHolder>() {
         )
 
     }
+
+
+    fun sortByPrice(){
+        items.sortBy { it.price }
+        notifyDataSetChanged()
+    }
+
+    fun sortByDuration(){
+        items.sortBy { it.flight.duration }
+        notifyDataSetChanged()
+    }
 }
